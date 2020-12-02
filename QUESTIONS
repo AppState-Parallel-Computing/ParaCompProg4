@@ -1,0 +1,57 @@
+1) Assume that the scan program is executed using the following command line:
+
+
+a) How large is the array that will be scanned?
+
+
+b) How large is the subarray size?
+
+
+c) How many tasks are enqueued during the process of executing the program?
+
+
+d) Explain why in this program (unlike the last version) it will never 
+be the case that a thread could potentially access outside of the 
+bounds of the array.
+
+
+2) Fill in the table below indicating the average speedup for a fixed 
+array size and subarray size while varying the number of threads
+Use the same command as in problem 1) with -s 28 and -c 20
+Note: your thread pool results may be very different across several
+runs thus you'll provide an average using the runScan program that
+is provided. Run the scan program 5 times using the command:
+./runScan -s 28 -c 20 -r 5 -t <value in table>
+Make sure that your scan program has been compiled with the NODEBUGFLAGS.
+
+-t value    average speedup
+8  
+16
+24 
+32
+40
+48
+
+3) In the last problem, you should see that the average speedup increases with an increasing
+number of threads.  Explain why.
+
+4) Fill in the table indicating the average speedup and the number of
+tasks for a fixed array size and fixed number of threads while varying the 
+subarray size. Use the command options -s 28, -t 48, -r 5 with the -c option
+in the table below.  Make sure that your scan program has been compiled 
+with the NODEBUGFLAGS.
+
+-c value   average speedup   number of tasks
+16          
+18         
+20        
+22       
+24      
+26     
+28    
+
+5) In the previous problem, you should see that the average speedup increases
+and then decreases with increasing subarray size. Explain why. How should
+the command line options be chosen?
+
+
