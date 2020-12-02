@@ -33,6 +33,8 @@ ThreadedScan::ThreadedScan(std::vector<int> nums, uint64_t numThreads,
 float ThreadedScan::performScan()
 { 
 
+  /* WORK TO DO IN THIS FUNCTION */
+
   TIMERSTART(threaded)
 
   //Step 1:
