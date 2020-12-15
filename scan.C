@@ -151,8 +151,8 @@ void usage()
   printf("\t<m> is the number of threads to use to perform the scan\n");
   printf("\t<m> must be greater than 1 and less than %ld\n\n",
          sysconf(_SC_NPROCESSORS_ONLN) + 1);
-  printf("\t<k> is the size of the subarray that each thread will\n");
-  printf("\ton.  It cannot be greater than <n>\n\n");
+  printf("\t<k>: 1 << <k) (e.g. 2^<k) is the size of the subarray that\n");
+  printf("\teach thread will operate on.  It cannot be greater than <n>\n\n");
   exit(0);
 }
 
