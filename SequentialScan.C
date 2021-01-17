@@ -30,7 +30,7 @@ float SequentialScan::performScan()
   //start timing the scan (see helpers.h)
   TIMERSTART(sequential)
 
-  for (long int i = 1; i < nums.size(); i++)
+  for (long int i = 1; i < (long int) nums.size(); i++)
     nums[i] = nums[i] + nums[i - 1];
 
   //stop timing the scan
@@ -58,7 +58,7 @@ int SequentialScan::compare(std::vector<int> &inputNums)
   }
 
   //make sure they contain the same values
-  for (long int i = 0; i < nums.size(); i++)
+  for (long int i = 0; i < (long int) nums.size(); i++)
   {
     if (inputNums[i] != nums[i])
     {

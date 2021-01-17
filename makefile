@@ -1,6 +1,6 @@
 CC = g++
-DEBUGFLAGS = -g -c -std=c++11
-NODEBUGFLAGS = -c -std=c++11 -O2 
+DEBUGFLAGS = -g -c -std=c++11 -Wall -Werror
+NODEBUGFLAGS = -c -std=c++11 -O2 -Wall -Werror
 CFLAGS = $(NODEBUGFLAGS)
 OBJS = scan.o SequentialScan.o ThreadedScan.o ThreadPool.o
 

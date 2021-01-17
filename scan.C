@@ -28,7 +28,7 @@ static void init(std::vector<int> &, long int);
  */
 int main(int argc, char * argv[])
 {
-  long int numThreads, arraySize, subarraySize;
+  long int numThreads = 0, arraySize = 0, subarraySize = 0;
   std::vector<int> initArray;
 
   //parse the command line arguments and get the number of threads
