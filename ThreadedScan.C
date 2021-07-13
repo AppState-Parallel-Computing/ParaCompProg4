@@ -43,7 +43,7 @@ float ThreadedScan::performScan()
   //Ignore the future object returned by enqueue since it isn't needed
 
 
-  //wait for the number of tasks to be completed becomes 0
+  //wait until the number of tasks to be completed becomes 0
   //You'll need to implement this function in the ThreadPool class.
   pool->waitForZeroTasks();
 
@@ -55,7 +55,7 @@ float ThreadedScan::performScan()
   //task i - 1 in the last step to each element of subarray i and
   //add each task to the thread pool.
 
-  //wait for the number of tasks to be completed becomes 0
+  //wait until the number of tasks to be completed becomes 0
   pool->waitForZeroTasks();
 
   TIMERSTOP(threaded)
