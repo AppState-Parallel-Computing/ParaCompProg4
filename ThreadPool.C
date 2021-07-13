@@ -76,11 +76,12 @@ void ThreadPool::afterTaskHook()
   /* WORK TO DO HERE */
   //Decrease the number of tasks completed (numTasks) and signal the
   //thread waiting for the number of tasks to become 0 if numTasks is 0.
-  //Use the zeroTasksCV condition variable. Note that mutex is used
-  //in the code that calls this method to prevent multiple threads
-  //from executing this code simultaneously.  This is needed because
-  //numTasks is shared data. Thus, you don't need to use mutex here.
-  //FYI. The numTask variable is incremented in the enqueue method. 
+  //Use the zeroTasksCV condition variable in ThreadPool.h. 
+  //Note that mutex is used in the code that calls this method to prevent 
+  //multiple threads from executing this code simultaneously.  This is 
+  //needed because numTasks is shared data. Thus, you don't need to use 
+  //mutex here.  
+  //FYI: The numTask variable is incremented in the enqueue method. 
   //You don't need to add that code.
  
 }
@@ -96,8 +97,9 @@ void ThreadPool::waitForZeroTasks()
   //The thread that calls this function will wait until
   //the number of tasks to complete becomes 0 (numTasks)
   //Since numTasks is shared data, you'll need a lock
-  //using the mutex data member to access it mutually exclusively.
-  //You'll need to use the zeroTasksCV to cause the thread
+  //using the mutex data member in ThreadPool.h to access it 
+  //mutually exclusively. You'll need to use zeroTasksCV 
+  //condition variable in ThreadPool.h to cause the thread
   //to wait.
 }
 
